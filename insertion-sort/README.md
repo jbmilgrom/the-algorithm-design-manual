@@ -1,7 +1,7 @@
-## array (TypeScript)
+## Array (TypeScript)
 Array insertion-sort lends itself to in place, mutation of the data (i.e. the array). Notice how the for-loop iterates up the array in order to set up the while-loop iteration back down in the opposite direction. Each iteration, i, in the for-loop receives an array that has been sorted up until such i; such array has an unsorted remainder to the extent i is less than last index of the array. Since the for and while loops work together to orchestrate these operations on the same reference in memory it is unnatural to separate them; the for a while loops are more naturally kept together.
 
-## linked-list (Scheme)
+## Linked-List (Scheme)
 On the other hand, linked-list insertion-sort lends itself to immutable transformations. insert-into-sorted-list accepts a sorted list and an item for insertion and returns a newly created sorted list that includes the new item. insertion-sort-iterative (as well as insertion-sort-recursive flavor) accept an unsorted list and orchestrate calls to insert-into-sorted-list with newly created sorted lists and the next item up for insertion. Since a linked-list does not allow random access to its members like its array counterpart, "back down" iteration has no analogous concept in this context; linked-lists may only be traversed sequantially, in a single direction. This is the reason why insert-into-sorted-list may only begin again at the beginning of the list every time it is called. 
 
 ## Complexity Analysis
