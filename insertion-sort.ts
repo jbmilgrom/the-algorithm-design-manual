@@ -1,7 +1,11 @@
+type Compare<T> = <T>(a: T, b: T) => boolean; 
+
+const numericalIsLessThan: Compare<number> = (a, b) => a < b;
+
 /**
  * In place N^2 sort implementation with arrays
  */
-const insertionSort = <T extends {}>(items: T[], isLessThan: <T>(a: T, b: T) => boolean = numericalIsLessThan): T[] => {
+const insertionSort = <T extends any>(items: T[], isLessThan: Compare<T> = numericalIsLessThan): T[] => {
     let i: number;
     for (i = 0; i < items.length; i++) {
         let j: number = i;
@@ -22,4 +26,3 @@ const swap = (items: any[], i: number, j: number): void => {
     items[j] = iItem;
 };
 
-const numericalIsLessThan = (a, b) => a < b;

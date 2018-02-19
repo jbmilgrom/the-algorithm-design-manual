@@ -44,6 +44,6 @@
 (define (insert-into-sorted-list item items)
   (cond 
     ((null? items) (cons item `()))
-    ((< item (car items)) (cons item items)) ; short circuit  
+    ((< item (car items)) (cons item items))
     (else (cons (car items) (insert-into-sorted-list (cdr items) item)))))
 
