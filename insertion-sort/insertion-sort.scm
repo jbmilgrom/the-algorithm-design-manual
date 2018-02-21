@@ -1,7 +1,6 @@
 ; Sort implementation with linked-lists that feed items into a new list using insert-into-sorted-list algorithm
 ; Worst-case complexity: O(n^2)
 
-; v1
 ; alg:
 ; 1. create empty list - an empty list is sorted by definition
 ; 2. insert item to list using insert-into-sorted-list algorithm
@@ -17,7 +16,6 @@
       (iterator (insert-into-sorted-list (car _items) result) (cdr _items))))
   (iterator `() items))
 
-; v2
 ; alg:
 ; 1. insert first item into result of insert-into-sorted-list called on alg((cdr items))
 
@@ -35,6 +33,7 @@
 
 ; Given a sorted list, insert item and maintain sorted order
 ; Worst-case complexity: O(n)
+
 ; alg: 
 ; 1. if first item in list is greater than item, append item to beginning of list
 ; 2. if not, create new list with first item and result of alg((cdr items) item)
