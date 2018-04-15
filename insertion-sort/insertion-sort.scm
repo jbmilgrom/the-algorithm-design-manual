@@ -1,5 +1,6 @@
 ; Sort implementation with linked-lists that feed items into a new list using insert-into-sorted-list algorithm
-; Worst-case complexity: O(n^2)
+; Time complexity: O(n^2)
+; Space complexity: O(1)
 
 ; alg:
 ; 1. create empty list - an empty list is sorted by definition
@@ -32,7 +33,8 @@
     (insert-into-sorted-list (car items) (insertion-sort-recursive (cdr items)))))
 
 ; Given a sorted list, insert item and maintain sorted order
-; Worst-case complexity: O(n)
+; Time complexity: O(n)
+; Space complexity: O(n)
 
 ; alg: 
 ; 1. if first item in list is greater than item, append item to beginning of list
