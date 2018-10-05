@@ -1,4 +1,5 @@
-; Log(n) (i.e "halfing") search through a sorted list 
+; Log(n) (i.e "halfing") search through a sorted list (i.e. no random access)
+
 ; This actually will not work. In a simple list there is no concept of "half" until
 ; the whole list has been traversed. Additionally, since lists do not provide
 ; random access, there is no way to cut a list in half without traversing
